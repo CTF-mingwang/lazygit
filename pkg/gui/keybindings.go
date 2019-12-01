@@ -109,13 +109,13 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName: "",
-			Key:      'K',
+			Key:      'U',
 			Modifier: gocui.ModNone,
 			Handler:  gui.scrollUpMain,
 		},
 		{
 			ViewName: "",
-			Key:      'J',
+			Key:      'E',
 			Modifier: gocui.ModNone,
 			Handler:  gui.scrollDownMain,
 		},
@@ -185,21 +185,21 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "status",
-			Key:         'e',
+			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleEditConfig,
 			Description: gui.Tr.SLocalize("EditConfig"),
 		},
 		{
 			ViewName:    "status",
-			Key:         'o',
+			Key:         'O',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleOpenConfig,
 			Description: gui.Tr.SLocalize("OpenConfig"),
 		},
 		{
 			ViewName:    "status",
-			Key:         'u',
+			Key:         'l',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleCheckForUpdate,
 			Description: gui.Tr.SLocalize("checkForUpdate"),
@@ -255,21 +255,21 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "files",
-			Key:         'e',
+			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleFileEdit,
 			Description: gui.Tr.SLocalize("editFile"),
 		},
 		{
 			ViewName:    "files",
-			Key:         'o',
+			Key:         'O',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleFileOpen,
 			Description: gui.Tr.SLocalize("openFile"),
 		},
 		{
 			ViewName:    "files",
-			Key:         'i',
+			Key:         'I',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleIgnoreFile,
 			Description: gui.Tr.SLocalize("ignoreFile"),
@@ -341,7 +341,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"local-branches"},
-			Key:         'o',
+			Key:         'K',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleCreatePullRequestPress,
 			Description: gui.Tr.SLocalize("createPullRequest"),
@@ -365,7 +365,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"local-branches"},
-			Key:         'n',
+			Key:         'k',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleNewBranch,
 			Description: gui.Tr.SLocalize("newBranch"),
@@ -429,7 +429,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"tags"},
-			Key:         'n',
+			Key:         'k',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleCreateTag,
 			Description: gui.Tr.SLocalize("createTag"),
@@ -526,7 +526,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "commits",
-			Key:         'e',
+			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleCommitEdit,
 			Description: gui.Tr.SLocalize("editCommit"),
@@ -680,7 +680,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		},
 		{
 			ViewName:    "commitFiles",
-			Key:         'o',
+			Key:         'O',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleOpenOldCommitFile,
 			Description: gui.Tr.SLocalize("openFile"),
@@ -809,14 +809,14 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName: "main",
 			Contexts: []string{"patch-building", "staging"},
-			Key:      'k',
+			Key:      'u',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectPrevLine,
 		},
 		{
 			ViewName: "main",
 			Contexts: []string{"patch-building", "staging"},
-			Key:      'j',
+			Key:      'e',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectNextLine,
 		},
@@ -853,21 +853,21 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName: "main",
 			Contexts: []string{"patch-building", "staging"},
-			Key:      'h',
+			Key:      'n',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectPrevHunk,
 		},
 		{
 			ViewName: "main",
 			Contexts: []string{"patch-building", "staging"},
-			Key:      'l',
+			Key:      'i',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectNextHunk,
 		},
 		{
 			ViewName:    "main",
 			Contexts:    []string{"staging"},
-			Key:         'e',
+			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleFileEdit,
 			Description: gui.Tr.SLocalize("editFile"),
@@ -875,7 +875,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "main",
 			Contexts:    []string{"staging"},
-			Key:         'o',
+			Key:         'O',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleFileOpen,
 			Description: gui.Tr.SLocalize("openFile"),
@@ -1022,28 +1022,28 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName: "main",
 			Contexts: []string{"mergin"},
-			Key:      'h',
+			Key:      'n',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectPrevConflict,
 		},
 		{
 			ViewName: "main",
 			Contexts: []string{"mergin"},
-			Key:      'l',
+			Key:      'i',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectNextConflict,
 		},
 		{
 			ViewName: "main",
 			Contexts: []string{"mergin"},
-			Key:      'k',
+			Key:      'u',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectTop,
 		},
 		{
 			ViewName: "main",
 			Contexts: []string{"mergin"},
-			Key:      'j',
+			Key:      'e',
 			Modifier: gocui.ModNone,
 			Handler:  gui.handleSelectBottom,
 		},
@@ -1065,7 +1065,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"remotes"},
-			Key:         'n',
+			Key:         'k',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleAddRemote,
 			Description: gui.Tr.SLocalize("addNewRemote"),
@@ -1081,7 +1081,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"remotes"},
-			Key:         'e',
+			Key:         'o',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleEditRemote,
 			Description: gui.Tr.SLocalize("editRemote"),
@@ -1121,7 +1121,7 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 		{
 			ViewName:    "branches",
 			Contexts:    []string{"remote-branches"},
-			Key:         'u',
+			Key:         'l',
 			Modifier:    gocui.ModNone,
 			Handler:     gui.handleSetBranchUpstream,
 			Description: gui.Tr.SLocalize("setUpstream"),
@@ -1151,8 +1151,8 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 			{ViewName: viewName, Key: gocui.KeyTab, Modifier: gocui.ModNone, Handler: gui.nextView},
 			{ViewName: viewName, Key: gocui.KeyArrowLeft, Modifier: gocui.ModNone, Handler: gui.previousView},
 			{ViewName: viewName, Key: gocui.KeyArrowRight, Modifier: gocui.ModNone, Handler: gui.nextView},
-			{ViewName: viewName, Key: 'h', Modifier: gocui.ModNone, Handler: gui.previousView},
-			{ViewName: viewName, Key: 'l', Modifier: gocui.ModNone, Handler: gui.nextView},
+			{ViewName: viewName, Key: 'n', Modifier: gocui.ModNone, Handler: gui.previousView},
+			{ViewName: viewName, Key: 'i', Modifier: gocui.ModNone, Handler: gui.nextView},
 		}...)
 	}
 
@@ -1163,10 +1163,10 @@ func (gui *Gui) GetInitialKeybindings() []*Binding {
 
 	for _, listView := range gui.getListViews() {
 		bindings = append(bindings, []*Binding{
-			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: 'k', Modifier: gocui.ModNone, Handler: listView.handlePrevLine},
+			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: 'u', Modifier: gocui.ModNone, Handler: listView.handlePrevLine},
 			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: gocui.KeyArrowUp, Modifier: gocui.ModNone, Handler: listView.handlePrevLine},
 			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: gocui.MouseWheelUp, Modifier: gocui.ModNone, Handler: listView.handlePrevLine},
-			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: 'j', Modifier: gocui.ModNone, Handler: listView.handleNextLine},
+			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: 'e', Modifier: gocui.ModNone, Handler: listView.handleNextLine},
 			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: gocui.KeyArrowDown, Modifier: gocui.ModNone, Handler: listView.handleNextLine},
 			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: gocui.MouseWheelDown, Modifier: gocui.ModNone, Handler: listView.handleNextLine},
 			{ViewName: listView.viewName, Contexts: []string{listView.context}, Key: gocui.MouseLeft, Modifier: gocui.ModNone, Handler: listView.handleClick},
