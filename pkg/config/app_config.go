@@ -240,7 +240,7 @@ func GetDefaultConfig() []byte {
 	return []byte(
 		`gui:
   ## stuff relating to the UI
-  scrollHeight: 2
+  scrollHeight: 4
   scrollPastBottom: true
   mouseEvents: true
   theme:
@@ -260,9 +260,9 @@ git:
   skipHookPrefix: 'WIP'
   autoFetch: true
 update:
-  method: prompt # can be: prompt | background | never
-  days: 14 # how often a update is checked for
-reporting: 'undetermined' # one of: 'on' | 'off' | 'undetermined'
+  method: never # can be: prompt | background | never
+  days: 999 # how often a update is checked for
+reporting: 'off' # one of: 'on' | 'off' | 'undetermined'
 splashUpdatesIndex: 0
 confirmOnQuit: false
 `)
